@@ -49,8 +49,8 @@ public class Animation : Sprite
         int width = (int)(rect.Width * Scale.X);
         int height = (int)(rect.Height * Scale.Y);
 
-        int posX = (int)(Position.X - Origin.X * Scale.X);
-        int posY = (int)(Position.Y - Origin.Y * Scale.Y);
+        int posX = (int)(Position.X - width * 0.5f);
+        int posY = (int)(Position.Y - height * 0.5f);
 
         return new Rectangle(posX, posY, width, height);
     }

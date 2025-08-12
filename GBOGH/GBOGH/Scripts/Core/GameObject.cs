@@ -26,7 +26,7 @@ public abstract class GameObject : IUpdateables, IDrawables
     public virtual void Enable()
     {
         IsActive = true;
-        //Enable Logic
+        //Enable Logic 
     }
 
     public virtual void Disable()

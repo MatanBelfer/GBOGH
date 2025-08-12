@@ -25,7 +25,7 @@ public class Sprite : GameObject
             Rectangle sourceRect = SourceRectangle.IsEmpty
                 ? new Rectangle(0, 0, Texture.Width, Texture.Height)
                 : SourceRectangle;
-            drawOrigin = new Vector2(sourceRect.Width * 0.5f, sourceRect.Height * 0.5f);
+          
         }
 
         spriteBatch.Draw(
@@ -34,10 +34,10 @@ public class Sprite : GameObject
             SourceRectangle,
             Color.White,
             MathHelper.ToRadians(Rotation),
-            drawOrigin,
+            Vector2.Zero, 
             Scale,
             Effect,
-            LayerDepth //  layer depth from GameObject
+            LayerDepth 
         );
     }
 

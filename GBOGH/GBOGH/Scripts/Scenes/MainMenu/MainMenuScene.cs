@@ -16,12 +16,14 @@ public class MainMenuScene : IScene
     {
         //TODO add menu buttons Start, Settings, Exit
 
-        var startButton = new StartButton();
-        
-        var settingsButton = new SettingsButton();
+        var startButton = new StartButton("Start");
+        SceneObjects.Add(startButton);
 
-        var exitButton = new ExitButton();
+        var settingsButton = new SettingsButton("Settings");
+        SceneObjects.Add(settingsButton);
 
+        var exitButton = new ExitButton("Exit");
+        SceneObjects.Add(exitButton);
     }
 
     public void OnDisable()
