@@ -10,6 +10,7 @@ public class Player : Animation
     //TODO add logic for scoring system
     
     private float speed = 250f;
+    private float originSpeed;
     private bool disableMovement = false; //TODO change to true after there are buttons to start the game and shit
     private const float HORIZONTALMULTIPLIER = 1f;
     private const float UPMULTIPLIER = 1.66f;
@@ -20,6 +21,7 @@ public class Player : Animation
     {
         SpriteManager.AddSprite("weapon", "Images/Trident");
         Rotation = MathHelper.ToRadians(135);
+        originSpeed = speed;
     }
     
     public void EnableMovement()
