@@ -16,7 +16,7 @@ public static class SceneManager
         EnableNextScene(scene);
     }
 
-    public static void EnableNextScene(IScene scene)
+    public static void EnableScene(IScene scene)
     {
         CurrentScene = scene;
         CurrentScene.OnEnable();

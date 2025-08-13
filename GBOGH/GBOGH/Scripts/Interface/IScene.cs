@@ -5,9 +5,8 @@ namespace EX04OOP.Interfaces;
 
 public interface IScene
 {
-    
-    
     public delegate void SceneUnloadHandler();
+
     public event SceneUnloadHandler OnSceneUnload;
 
     public string Name { get; set; }
@@ -17,5 +16,6 @@ public interface IScene
     public void OnEnable();
 
     public void OnDisable();
- 
+
+    public void InitSceneObjects();
 }

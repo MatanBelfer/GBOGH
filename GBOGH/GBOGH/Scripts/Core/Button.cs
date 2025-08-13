@@ -17,9 +17,9 @@ public class Button : GameObject
     public string Text = "";
     public bool TintEnabled = false;
     
-    private Sprite _buttonSprite;
-    private Rectangle? _clickArea;
-    private Sprite _buttonTint;
+    protected Sprite _buttonSprite;
+    protected Rectangle? _clickArea;
+    protected Sprite _buttonTint;
 
 
     // Font properties

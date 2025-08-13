@@ -34,7 +34,7 @@ public class Sprite : GameObject
             SourceRectangle,
             Color.White,
             MathHelper.ToRadians(Rotation),
-            Vector2.Zero, 
+            drawOrigin, 
             Scale,
             Effect,
             LayerDepth 
