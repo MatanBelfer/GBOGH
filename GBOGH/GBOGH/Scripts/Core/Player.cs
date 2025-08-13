@@ -11,9 +11,10 @@ public class Player : Animation
     
     private float speed = 250f;
     private bool disableMovement = false; //TODO change to true after there are buttons to start the game and shit
-    private const float HorizontalMultiplier = 1f;
-    private const float UpMultiplier = 1.4f;
-    private const float DownMultiplier = 0.6f;
+    private const float HORIZONTALMULTIPLIER = 1f;
+    private const float UPMULTIPLIER = 1.66f;
+    private const float DOWNMULTIPLIER = 0.66f;
+    private const float SLOWMOTION = 0.7f;
     
     public Player(string animationName) : base(animationName)
     {
@@ -45,19 +46,19 @@ public class Player : Animation
                     //Movements
                     case Keys.Up:
                     case Keys.W:
-                        Position.Y -= speed * UpMultiplier * deltaTime;
+                        Position.Y -= speed * UPMULTIPLIER * deltaTime;
                         break;
                     case Keys.Left:
                     case Keys.A:
-                        Position.X -= speed * HorizontalMultiplier * deltaTime;
+                        Position.X -= speed * HORIZONTALMULTIPLIER * deltaTime;
                         break;
                     case Keys.Down:
                     case Keys.S:
-                        Position.Y += speed * DownMultiplier * deltaTime;
+                        Position.Y += speed * DOWNMULTIPLIER * deltaTime;
                         break;
                     case Keys.Right:
                     case Keys.D:
-                        Position.X += speed * HorizontalMultiplier * deltaTime;
+                        Position.X += speed * HORIZONTALMULTIPLIER * deltaTime;
                         break;
                 }
             }
