@@ -350,19 +350,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\matan\\.nuget\\packages\\": {}
+    "C:\\Users\\kabut\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matan\\Desktop\\GitHub\\GBOGH\\GBOGH\\GBOGH\\GBOGH.csproj",
+      "projectUniqueName": "C:\\Users\\kabut\\OneDrive\\Desktop\\MonoGame\\GBOGH\\GBOGH\\GBOGH\\GBOGH.csproj",
       "projectName": "GBOGH",
-      "projectPath": "C:\\Users\\matan\\Desktop\\GitHub\\GBOGH\\GBOGH\\GBOGH\\GBOGH.csproj",
-      "packagesPath": "C:\\Users\\matan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matan\\Desktop\\GitHub\\GBOGH\\GBOGH\\GBOGH\\obj\\",
+      "projectPath": "C:\\Users\\kabut\\OneDrive\\Desktop\\MonoGame\\GBOGH\\GBOGH\\GBOGH\\GBOGH.csproj",
+      "packagesPath": "C:\\Users\\kabut\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kabut\\OneDrive\\Desktop\\MonoGame\\GBOGH\\GBOGH\\GBOGH\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\matan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\kabut\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -415,19 +415,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.19, 8.0.19]"
+            "version": "[8.0.18, 8.0.18]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.19, 8.0.19]"
+            "version": "[8.0.18, 8.0.18]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.19, 8.0.19]"
+            "version": "[8.0.18, 8.0.18]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.19, 8.0.19]"
+            "version": "[8.0.18, 8.0.18]"
           }
         ],
         "frameworkReferences": {
@@ -435,7 +435,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
