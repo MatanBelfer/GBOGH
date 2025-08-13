@@ -19,7 +19,6 @@ public class Player : Animation
     
     public Player(string animationName) : base(animationName)
     {
-        SpriteManager.AddSprite("weapon", "Images/Trident");
         Rotation = MathHelper.ToRadians(135);
         originSpeed = speed;
     }
