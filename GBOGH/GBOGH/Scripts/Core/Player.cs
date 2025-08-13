@@ -13,8 +13,8 @@ public class Player : Animation
     private float originSpeed;
     private bool disableMovement = false; //TODO change to true after there are buttons to start the game and shit
     private const float HORIZONTALMULTIPLIER = 1f;
-    private const float UPMULTIPLIER = 1.66f;
-    private const float DOWNMULTIPLIER = 0.66f;
+    private const float UPMULTIPLIER = 1.626f;
+    private const float DOWNMULTIPLIER = 0.616f;
     private const float SLOWMOTION = 0.7f;
     
     public Player(string animationName) : base(animationName)
@@ -60,6 +60,9 @@ public class Player : Animation
                     case Keys.Right:
                     case Keys.D:
                         Position.X += speed * HORIZONTALMULTIPLIER * deltaTime;
+                        break;
+                    case Keys.Space:
+                        //TODO add slow logic
                         break;
                 }
             }
