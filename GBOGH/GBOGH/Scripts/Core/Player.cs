@@ -6,9 +6,8 @@ namespace GBOGH.Scripts.Core;
 
 public class Player : Animation
 {
-    //TODO add listener to event for release
-    //TODO add collider to detect fish
-    //TODO add logic for score
+    //TODO add listener to event for starting
+    //TODO add logic for scoring system
     
     private float speed = 250f;
     private bool disableMovement = false; //TODO change to true after there are buttons to start the game and shit

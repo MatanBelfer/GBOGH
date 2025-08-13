@@ -21,7 +21,7 @@ public class BackgroundHandler : GameObject
         new Color(0, 12, 15, 255)
     ];
     private int currentIndex = 0;
-    private const float TransitionDuration = 1f;
+    private const float TRANSITIONDURATION = 1f;
     private float elapsedTime = 0f;
     private Color backgroundColor;
 
@@ -36,7 +36,7 @@ public class BackgroundHandler : GameObject
         if (currentIndex < backColors.Count - 1)
         {
             elapsedTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            var progress = MathHelper.Clamp(elapsedTime / TransitionDuration, 0f, 1f);
+            var progress = MathHelper.Clamp(elapsedTime / TRANSITIONDURATION, 0f, 1f);
 
             backgroundColor = Color.Lerp(backColors[currentIndex], backColors[currentIndex + 1], progress);
 
