@@ -1,8 +1,9 @@
-using EX04OOP.Interfaces;
+using GBOGH.Scripts.Interface;
+using GBOGH.Scripts.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace EX04OOP;
+namespace GBOGH.Scripts.Core;
 
 public abstract class GameObject : IUpdateables, IDrawables
 {

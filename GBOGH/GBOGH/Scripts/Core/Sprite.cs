@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace EX04OOP.Core;
+namespace GBOGH.Scripts.Core;
 
 public class Sprite : GameObject
 {

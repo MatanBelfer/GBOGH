@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using EX04OOP.Interfaces;
+using GBOGH.Scripts.Interface;
 
 namespace EX04OOP;
 

@@ -1,7 +1,6 @@
-﻿using EX04OOP.Core;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 
-namespace EX04OOP;
+namespace GBOGH.Scripts.Core;
 
 public class Animation : Sprite
 {

@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace EX04OOP.Interfaces;
+namespace GBOGH.Scripts.Interface;
 
 public interface IDrawables
 {

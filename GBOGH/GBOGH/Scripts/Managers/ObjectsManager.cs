@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using EX04OOP.Core;
+using GBOGH.Scripts.Core;
 
-namespace EX04OOP;
+namespace GBOGH.Scripts.Managers;
 
 public static class ObjectsManager
 {

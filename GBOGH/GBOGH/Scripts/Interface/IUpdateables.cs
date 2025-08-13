@@ -1,9 +1,8 @@
 using Microsoft.Xna.Framework;
 
-namespace EX04OOP;
+namespace GBOGH.Scripts.Interface;
 
 public interface IUpdateables 
 {
-    
     public void Update(GameTime gameTime);
 }

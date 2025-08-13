@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using EX04OOP;
-using EX04OOP.Interfaces;
+using GBOGH.Scripts.Core;
+using GBOGH.Scripts.Interface;
 using GBOGH.Scripts.Scene.Mainmenu;
 
 namespace GBOGH.Scripts.Scene.MainMenu;
@@ -20,7 +20,7 @@ public class MainMenuScene : IScene
         
         var settingsButton = new SettingsButton();
 
-        var exitButton = new ExitButton();
+        var exitButton = new ExitButton("exit");
 
     }
 

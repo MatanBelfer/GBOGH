@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GBOGH.Scripts.Managers;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -14,6 +15,9 @@ public class Game1 : Game
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+        
+        SpriteManager.Graphics = GraphicsDevice;
+        SpriteManager.Content = Content;
     }
 
     protected override void Initialize()
