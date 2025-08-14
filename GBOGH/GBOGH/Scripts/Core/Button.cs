@@ -1,12 +1,10 @@
 using System;
-using EX04OOP.Core;
-using GBOGH.Scripts.Core;
 using GBOGH.Scripts.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace EX04OOP;
+namespace GBOGH.Scripts.Core;
 
 public class Button : GameObject
 {

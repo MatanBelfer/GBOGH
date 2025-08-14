@@ -1,4 +1,5 @@
 using EX04OOP;
+using GBOGH.Scripts.Core;
 
 namespace GBOGH.Scripts.Scene.MainMenu;
 

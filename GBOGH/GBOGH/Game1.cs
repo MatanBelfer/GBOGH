@@ -1,4 +1,5 @@
-﻿using GBOGH.Scripts.Managers;
+﻿using GBOGH.Scripts.Core;
+using GBOGH.Scripts.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -47,8 +48,6 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
-
         // TODO: Add your drawing code here
 
         base.Draw(gameTime);
