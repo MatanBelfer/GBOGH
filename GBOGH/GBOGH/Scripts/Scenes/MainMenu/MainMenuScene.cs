@@ -1,44 +1,48 @@
 using System.Collections.Generic;
 using EX04OOP;
 using EX04OOP.Interfaces;
+using GBOGH.Scripts.Interface;
 using GBOGH.Scripts.Scene.MainMenu;
 
 namespace GBOGH.Scripts.Scenes.MainMenu;
 
-public class MainMenuScene : IScene
+public class MainMenuScene : Interface.Scene
 {
-    public event IScene.SceneUnloadHandler OnSceneUnload;
+    public event Interface.Scene.SceneUnloadHandler OnSceneUnload;
     public string Name { get; set; }
     public bool IsActive { get; set; }
-    public List<GameObject> SceneObjects { get; set; }
 
-    public void OnEnable()
+    public override void OnEnable()
     {
-        SceneObjects = new List<GameObject>();
-
-        //TODO add menu buttons Start, Settings, Exit
+        SceneObjects = new Dictionary<int, GameObject>();
 
         var startButton = new StartButton("Start");
-        SceneObjects.Add(startButton);
+        SceneObjects.Add(startButton.Index, startButton);
 
         var settingsButton = new SettingsButton("Settings");
-        SceneObjects.Add(settingsButton);
+        SceneObjects.Add(settingsButton.Index, settingsButton);
 
         var exitButton = new ExitButton("Exit");
-        SceneObjects.Add(exitButton);
-        InitSceneObjects();
+        SceneObjects.Add(exitButton.Index, exitButton);
+        Init();
     }
 
-    public void OnDisable()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void InitSceneObjects()
+    public override void Init()
     {
         foreach (var obj in SceneObjects)
         {
-            obj.Enable();
+            obj.Value.Enable();
+        }
+
+        
+    }
+
+    public override void OnDisable()
+    {
+        foreach (var obj in SceneObjects)
+        {
+            obj.Value.Disable();
         }
     }
+
 }

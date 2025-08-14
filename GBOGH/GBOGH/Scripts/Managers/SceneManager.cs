@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using EX04OOP.Interfaces;
+using GBOGH.Scripts.Interface;
 
 namespace EX04OOP;
 
 public static class SceneManager
 {
-    public static IScene CurrentScene;
-    private static Dictionary<string, IScene> scenes = new Dictionary<string, IScene>();
+    public static Scene CurrentScene;
+    private static Dictionary<string, Scene> scenes = new Dictionary<string, Scene>();
     public static bool Exit { get; set; }
     public static bool IsLoading { get; set; }
 
@@ -16,7 +17,7 @@ public static class SceneManager
         EnableNextScene(scene);
     }
 
-    public static void EnableScene(IScene scene)
+    public static void EnableScene(Scene scene)
     {
         CurrentScene = scene;
         CurrentScene.OnEnable();
@@ -29,7 +30,7 @@ public static class SceneManager
 
     }
 
-    private static IScene GetScene(string scene)
+    private static Scene GetScene(string scene)
     {
         return scenes[scene];
     }
@@ -40,7 +41,7 @@ public static class SceneManager
         CurrentScene?.OnDisable();
     }
 
-    public static void AddScene(string name, IScene scene)
+    public static void AddScene(string name, Scene scene)
     {
         
         scenes.Add(name, scene);
