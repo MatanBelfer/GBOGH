@@ -1,5 +1,10 @@
 using System;
+<<<<<<< HEAD
 using GBOGH.Scripts.Managers;
+=======
+using EX04OOP;
+using EX04OOP.Core;
+>>>>>>> main
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -13,13 +18,13 @@ public class Button : GameObject
 
     public event ButtonClickHandler OnButtonClick;
 
-    
+
     public string Text = "";
     public bool TintEnabled = false;
-    
-    private Sprite _buttonSprite;
-    private Rectangle? _clickArea;
-    private Sprite _buttonTint;
+
+    protected Sprite _buttonSprite;
+    protected Rectangle _clickArea;
+    protected Sprite _buttonTint;
 
 
     // Font properties
@@ -44,7 +49,7 @@ public class Button : GameObject
     private bool WasPressed = false;
 
 
-    public Button(string name) : base("Button_" + name)
+    private Button(string name) : base("Button_" + name)
     {
     }
 
@@ -71,6 +76,7 @@ public class Button : GameObject
     public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
     {
         // Draw the sprite first (with its layer depth)
+        
         _buttonSprite?.Draw(spriteBatch, gameTime);
         if (IsMouseOver() && TintEnabled)
         {
@@ -97,6 +103,8 @@ public class Button : GameObject
 
     public override void Update(GameTime gameTime)
     {
+        
+        
         if (Mouse.GetState().LeftButton == ButtonState.Pressed)
         {
             if (WasPressed)
@@ -115,8 +123,14 @@ public class Button : GameObject
         {
             WasPressed = false;
         }
-
-
+        
+        _clickArea.X = (int)Position.X;
+        _clickArea.Y = (int)Position.Y;
+        _clickArea.Width = (int)Size.X;
+        _clickArea.Height = (int)Size.Y;
+        _buttonSprite.Position = Position;
+        _buttonSprite.Scale = Scale;
+        _buttonSprite.Rotation = Rotation;
         base.Update(gameTime);
     }
 
@@ -124,8 +138,9 @@ public class Button : GameObject
     private bool IsMouseOver()
     {
         if (_buttonSprite == null) return false;
-        return _clickArea != null && _clickArea.Value.Contains(Mouse.GetState().Position);
+        return _clickArea != null && _clickArea.Contains(Mouse.GetState().Position);
     }
+
 
     public static Button CreateButton(string name, Sprite sprite)
     {
@@ -156,25 +171,19 @@ public class Button : GameObject
     {
         var button = new Button(name) { Text = text, _buttonSprite = sprite };
 
+
         if (sprite != null)
         {
-            button.LayerDepth = sprite.LayerDepth;
+            
+            // sprite.Position = button.Position;
+            // sprite.Scale = button.Scale;
+            // sprite.Rotation = button.Rotation;
+            // sprite.LayerDepth = button.LayerDepth;
+            // button.LayerDepth = sprite.LayerDepth;
 
-            // Update click area calculation since sprite now draws from center
-            Vector2 spriteSize = Vector2.Zero;
-            if (!sprite.SourceRectangle.IsEmpty)
-            {
-                spriteSize = new Vector2(sprite.SourceRectangle.Width, sprite.SourceRectangle.Height);
-            }
-            else if (sprite.Texture != null)
-            {
-                spriteSize = new Vector2(sprite.Texture.Width, sprite.Texture.Height);
-            }
+            button._clickArea = new Rectangle(sprite.SourceRectangle.X, sprite.SourceRectangle.Y, sprite.SourceRectangle.Width, sprite.SourceRectangle.Height);
 
-            Vector2 topLeft = sprite.Position - (spriteSize * 0.5f);
-            button._clickArea = new Rectangle((int)topLeft.X, (int)topLeft.Y, (int)spriteSize.X, (int)spriteSize.Y);
             SpriteManager.AddSprite("ButtonTint", sprite.SourceRectangle, new Color(Color.Black, 0.5f));
-
             button._buttonTint = SpriteManager.GetSprite("ButtonTint");
             button._buttonTint.Position = sprite.Position;
             button._buttonTint.LayerDepth = sprite.LayerDepth + 0.1f;
